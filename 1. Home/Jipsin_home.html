@@ -32,12 +32,6 @@
       width: 100vw;
       max-width: 100% /*하단 스크롤바 안 나오게*/
     }
-    li{
-      list-style: none;
-      display:inline-block;
-      margin: 10px;
-      margin-top: 30px;
-    }
     a{
     text-decoration: none;
     color: white;
@@ -65,6 +59,12 @@
       padding: 0;
       margin: 10px;
       margin-right: 40px;
+    }
+    #headerlist li{
+      list-style: none;
+      display:inline-block;
+      margin: 10px;
+      margin-top: 30px;
     }
     /*---------------------------메인 1. about us-----------------------------*/
     #main_aboutus{
@@ -162,12 +162,65 @@
     }
     /*-----------------------------메인 3. join us----------------------------*/
     #main_joinus{
-      height: 800px;
+      position: absolute;
+      height: 540px;
       background-color: #f5f5f5;
+      text-align: center;
+    }
+    #main_joinus h1{
+      margin-top: 70px;
+      margin-bottom: 30px;
+      font-size: 30px;
+      font-weight: 500;
+    }
+    #main_joinus hr{
+      height: 0.8px;
+      width: 100px;
+      background-color: black;
+    }
+    #main_joinus h2{
+      margin-top: 30px;
+      font-size: 30px;
+      font-weight: 500;
+    }
+    #main_joinus h3{
+      margin-top: 20px;
+      margin-bottom: 70px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    #main_trip .btn{
+    }
+    #joinus_btn{
+      color: #2d2d2d;
+      background-color: transparent;
+      border-style: solid !important;
+      border-color: #296671;
+      margin: 0;
+      height: 40px;
+      width: 160px;
+      text-align: center;
+      transition-duration: 0.5s; /*딜레이 시간*/
     }
     /*----------------------------메인 4. contact us--------------------------*/
     #main_contactus{
-      height: 800px;
+      position: absolute;
+      text-align: left;
+      height: 450px;
+    }
+    #main_contactus_content{
+      margin-left: 20px;
+      width: auto;
+    }
+    #main_contactus_content img{
+      margin-top: 60px;
+      margin-left: 20px;
+    }
+    #main_contactus_content li{
+      list-style: none;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #26667a;
     }
     /*------------------------------------------------------------------------*/
     </style>
@@ -177,16 +230,16 @@
     <div id="main_aboutus">
       <div id="header">
         <div id="toplogo">
-          <a href="Jipsin_home.html"><img src="../header/logo.png" height="100%" width="100%" style="vertival-align:middle; float:left;"></a>
+          <a href="Jipsin_home.html"><img src="../header/logo.png" height="100%" width="100%"></a>
         </div>
-        <ol id="headerlist">
+        <ul id="headerlist">
           <li><a href="Jipsin_home.html">Home</a></li>
           <li><a href="../2. About us/Jipsin_aboutus.html">About us</a></li>
           <li><a href="../3. Trip/Jipsin_trip.html">Trip</a></li>
           <li><a href="../4. Activity/Jipsin_activity.html">Activity</a></li>
           <li><a href="../5. Join us/Jipsin_joinus.html">Join us</a></li>
           <li><a href="../6. Contact us/Jipsin_contactus.html">Contact us</a></li>
-        </ol>
+        </ul>
       </div>
       <div id="main_aboutus_content"> -->
         <h1>Jipsin makes value</h1>
@@ -234,11 +287,31 @@
     </div>
     <!--                             3. Join us                              -->
     <div id="main_joinus">
+      <h1>Join us</h1>
+      <hr>            <!--실선-->
+      <h2>짚신에 합류하고<br>싶으신가요?</h2>
+      <h3>짚신에 지원하는 방법을 알아보세요<h3>
+        <div class="btn">
+          <a href="../3. Trip/Jipsin_trip.html">
+            <p id="joinus_btn" onmouseover="mOver(this, 'white', '#296671')" onmouseout="mOut(this, '#296671', 'transparent')">
+              지원하기
+            </p>
+          </a>
+        </div>
+    </div>
+    <div style="height:540px;"><!--div가 겹친다2 나는 빡친다 main_joinus height과 같게 하자-->
     </div>
     <!--                           4. Contact us                             -->
     <div id="main_contactus">
+      <div id="main_contactus_content">
+        <img src="../header/logo.png" width="200px" height="100px">
+        <ul>
+          <li>부산광역시 남구 용소로 45</li>
+          <li>부경대학교 중앙동아리 짚신</li>
+          <li>문의: 010-8406-8626</li>
+        </ul>
+      </div>
     </div>
   <div>
-
   </body>
 </html>
