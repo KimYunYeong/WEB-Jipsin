@@ -1,0 +1,81 @@
+body{
+  margin: 0;
+    margin: 0;
+    overflow-x: hidden !important;/*크롬을 제외한 브라우저에서 보이는 하단 스크롤 숨김*/
+    overflow-y: scroll !important;/*깃허브에 올렸을 때 뒤로가기 앞으로가기 반복시 스크롤 없어지느 경우 발생-시크릿모드에서는 안 그럼*/
+}
+div{
+  margin: 0;
+  width: 100vw;
+  max-width: 100% /*하단 스크롤바 안 나오게*/
+}
+a{
+text-decoration: none;
+color: white;
+}
+/*--------------------0. 웹 상단 로고 + 리스트 그리드-----------------------*/
+#header{
+  height: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 225px 1fr;
+}
+/*----------------------좌측상단 로고-------------------------*/
+#toplogo{
+  margin: 10px;
+  height: 90px;
+  width: 180px;
+  margin-left: 35px;
+}
+/*---------------------우측상단 리스트------------------------*/
+#headerlist{
+  font-size: 16px;
+  float: right;
+  list-style: none;
+  text-align: right;
+  padding: 0;
+  margin: 10px;
+  margin-right: 40px;
+}
+#headerlist li{
+  list-style: none;
+  display:inline-block;
+  margin: 10px;
+  margin-top: 30px;
+}
+/*----------------------------footer--------------------------*/
+#footer{
+  position: absolute;
+  text-align: left;
+  height: 410px;
+}
+#footer_content{
+  margin-left: 20px;
+  width: auto;
+  height: 100%
+}
+#footer_content img{
+  margin-top: 60px;
+  margin-left: 20px;
+}
+#footer_content ul{
+  margin-bottom: 40px;
+}
+#footer_content li{
+  list-style: none;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #26667a;
+}
+#footer_content hr{
+  width: 99%;
+  height: 0;
+  border: 0.8px;
+  border-style: solid;
+  border-color: lightgray;
+}
+#footer_content p{
+  margin: 25px;
+  text-align: center;
+  color: gray;
+}
