@@ -46,7 +46,6 @@
     }
     /*------------------------------링크 박스---------------------------------*/
     .btn{
-      display: block;
       width: 160px;
       height: 40px;
       line-height: 40px;
@@ -139,8 +138,6 @@
       font-size: 16px;
       font-weight: 500;
     }
-    #main_trip .btn{
-    }
     #joinus_btn{
       color: #2d2d2d;
       background-color: transparent;
@@ -156,9 +153,9 @@
     </style>
   </head>
   <body>
-    <!--                             1. About us                             -->
+    <!--                            1. About us                              -->
     <div id="main_aboutus">
-      <!--                              header                               -->
+      <!--                             header                                -->
       <div id="header">
         <div id="toplogo">
           <a href="index.html"><img src="header/logo.png" height="100%" width="100%"></a>
@@ -168,11 +165,11 @@
           <li><a href="2. About us/aboutus.html">About us</a></li>
           <li><a href="3. Trip/trip.html">Trip</a></li>
           <li><a href="4. Activity/activity.html">Activity</a></li>
-          <li><a href="5. Join us/joinus.html">Join us</a></li>
+          <li><a href="5. Join us/recruitment.html">Join us</a></li>
           <li><a href="6. Contact us/contactus.html">Contact us</a></li>
         </ul>
       </div>
-      <!--                              content                              -->
+      <!--                            content                                -->
       <div id="main_aboutus_content">
         <h1>Jipsin makes value</h1>
         <h2>짚신은 가치를 여행합니다</h2>
@@ -215,25 +212,27 @@
         </a>
       </div>
     </div>
-    <div style="height:620px;"><!--div가 겹친다 나는 빡친다 main_trip height과 같게 하자-->
+    <!--div가 겹친다 나는 빡친다 main_trip height과 같게 하자 position: absolute; 때문인듯 근데 안 쓰면 div 사이 공백생김-->
+    <div style="height:620px;">
     </div>
-    <!--                             3. Join us                              -->
+    <!--                            3. Join us                               -->
     <div id="main_joinus">
       <h1>Join us</h1>
       <hr>            <!--실선-->
       <h2>짚신에 합류하고<br>싶으신가요?</h2>
       <h3>짚신에 지원하는 방법을 알아보세요<h3>
         <div class="btn">
-          <a href="5. Join us/joinus.html">
+          <a href="5. Join us/recruitment.html">
             <p id="joinus_btn" onmouseover="mOver(this, 'white', '#296671')" onmouseout="mOut(this, '#296671', 'transparent')">
               지원하기
             </p>
           </a>
         </div>
     </div>
-    <div style="height:540px;"><!--div가 겹친다 나는 빡친다2 main_joinus height과 같게 하자-->
+    <!--        div가 겹친다 나는 빡친다2 main_joinus height과 같게 하자       -->
+    <div style="height:540px;">
     </div>
-    <!--                                footer                               -->
+    <!--                              footer                                 -->
     <div id="footer">
       <div id="footer_content">
         <img src="header/logo.png" width="200px" height="100px">
@@ -248,7 +247,7 @@
           var now = new Date();
           var year = now.getFullYear();
           if (year == 2022) {
-          document.write(year);
+            document.write(year);
           }
           else {
             document.write("2022 - " + year);
@@ -256,6 +255,5 @@
         </script> 짚신</p>
       </div>
     </div>
-  </div>
   </body>
 </html>
