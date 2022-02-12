@@ -25,12 +25,6 @@
         grid-template-columns: 550px 1fr;
       }
       /* -------------------------------------------------------------------- */
-      #header_background{
-        width: 100%;
-        height: 300px;
-        background-color: gray;
-      }
-      /* -------------------------------------------------------------------- */
       #banner{
         display: grid;
         width: 100%;
@@ -101,12 +95,12 @@
     </style>
   </head>
   <body>
-  <div id="header_background">
-    <!--                               header                                -->
-    <div id="header">
-      <div id="toplogo">
-        <a href="../index.html"><img src="../header/logo.png" height="100%" width="100%"></a>
-      </div>
+    <div id="header_background">
+      <!--                               header                                -->
+      <div id="header">
+        <div id="toplogo">
+          <a href="../index.html"><img src="../header/logo.png" height="100%" width="100%"></a>
+        </div>
         <ul id="headerlist">
           <li><a href="../index.html">Home</a></li>
           <li><a href="../2. About us/aboutus.html">About us</a></li>
@@ -115,14 +109,16 @@
           <li><a href="../5. Join us/recruitment.html">Join us</a></li>
           <li><a href="../6. Contact us/contactus.html">Contact us</a></li>
         </ul>
+        <h1 id="header_title">About us</h1>
       </div>
-      <h1 id="header_title">About us</h1>
     </div>
+    <!--                               banner                                -->
     <ul id="banner">
       <li onmouseover="mOver(this, 'white', 'slategray')" onmouseout="mOut(this, 'white', 'transparent')"><a href="aboutus.html">About 짚신</a></li>
       <li onmouseover="mOver(this, 'white', 'slategray')" onmouseout="mOut(this, 'white', 'transparent')"><a href="aboutus_1.html">...</a></li>
       <li onmouseover="mOver(this, 'white', 'slategray')" onmouseout="mOut(this, 'white', 'transparent')"><a href="Organization.html">Organization</a></li>
     </ul>
+    <!--                              Overview                               -->
     <div id="overview_background">
       <div id="overview">
         <div id="title">
@@ -135,6 +131,7 @@
         </div>
       </div>
     </div>
+    <!--                               Histiory                              -->
     <div id="history_background">
       <div id="history">
         <div class="content">
@@ -172,6 +169,5 @@
         </script> 짚신</p>
       </div>
     </div>
-  </div>
   </body>
 </html>

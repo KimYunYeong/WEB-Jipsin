@@ -2,34 +2,27 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>짚신 - Recruitment</title>
+    <title>짚신 - Organization</title>
     <link rel="stylesheet" href="../CSS/style.css"><!--CSS-->
     <script src="../JavaScript/btn.js"></script><!--JavaScript-->
     <style>
       div{
-       color: black;
+        color: white;
       }
       h3{
-        font-size: 20px;
-        font-weight: 600;
+        font-size: 35px;
+        font-weight: 300;
+        text-align: center;
       }
       p{
         text-align: left;
         font-size: 18px;
         margin: auto;
         margin-left: 0;
-        line-height: 50px;
       }
       .content{
         display: grid;
-        grid-template-columns: 60% 40%;
-        margin-top: 100px;
-        margin-bottom: 100px;
-        height: 260px;
-      }
-      .img{
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
+        grid-template-columns: 550px 1fr;
       }
       /* -------------------------------------------------------------------- */
       #banner{
@@ -49,13 +42,13 @@
         transition-duration: 0.5s;
       }
       /* -------------------------------------------------------------------- */
-      #apply_background{
+      #overview_background{
         display: grid;
         width:100%;
-        height: 600px;/*문단 크기 조절*/
-        background-color: white;
+        height: 800px;
+        background-color: darkgray;
       }
-      #apply{
+      #overview{
         margin-left: 28%;
         margin-right: 28%;
         height: 100%;
@@ -77,14 +70,33 @@
         width: 80%;
         border-style: solid;
         border-width: 0.1px;
-        border-color: black;
-        background-color: black;
+        border-color: white;
+        background-color: white;
+      }
+      #overview .content{
+        margin-top: 200px;
+      }
+      /* -------------------------------------------------------------------- */
+      #history_background{
+        display: grid;
+        width:100%;
+        height: 800px;
+        background-color: lightgray;
+      }
+      #history{
+        margin-left: 28%;
+        margin-right: 28%;
+        height: 100%;
+        width: auto;
+      }
+      #history .content{
+        margin-top: 300px;
       }
     </style>
   </head>
   <body>
     <div id="header_background">
-      <!--                            header                                 -->
+      <!--                               header                                -->
       <div id="header">
         <div id="toplogo">
           <a href="../index.html"><img src="../header/logo.png" height="100%" width="100%"></a>
@@ -97,28 +109,24 @@
           <li><a href="../5. Join us/recruitment.html">Join us</a></li>
           <li><a href="../6. Contact us/contactus.html">Contact us</a></li>
         </ul>
+        <h1 id="header_title">About us</h1>
       </div>
-      <h1 id="header_title">Join us</h1>
     </div>
     <!--                               banner                                -->
     <ul id="banner">
-      <li onmouseover="mOver(this, 'white', 'slategray')" onmouseout="mOut(this, 'white', 'transparent')"><a href="recruitment.html">Recruitment</a></li>
-      <li onmouseover="mOver(this, 'white', 'slategray')" onmouseout="mOut(this, 'white', 'transparent')"><a href="apply.html">Apply</a></li>
-      <li onmouseover="mOver(this, 'white', 'slategray')" onmouseout="mOut(this, 'white', 'transparent')"><a href="faq.html">FAQ</a></li>
+      <li onmouseover="mOver(this, 'white', 'slategray')" onmouseout="mOut(this, 'white', 'transparent')"><a href="aboutus.html">About 짚신</a></li>
+      <li onmouseover="mOver(this, 'white', 'slategray')" onmouseout="mOut(this, 'white', 'transparent')"><a href="aboutus_1.html">...</a></li>
+      <li onmouseover="mOver(this, 'white', 'slategray')" onmouseout="mOut(this, 'white', 'transparent')"><a href="Organization.html">Organization</a></li>
     </ul>
-    <!--                               Apply                                 -->
-    <div id="apply_background">
-      <div id="apply">
+    <!--                            Organization                             -->
+    <div id="overview_background">
+      <div id="overview">
         <div id="title">
-          <h2>지원</h2>
+          <h2>조직도</h2>
           <hr>
         </div>
         <div class="content">
-          <div>
-            <h3>지원 방법</h3>
-            <p>짚신 인사부 연락을 통해 지원하시면 됩니다.<br>-인사부 연락처: -----<br>*궁금한 점은 FAQ 참조</p>
-          </div>
-          <div class="img" style="background-image: url(apply.jpg);"></div>
+
         </div>
       </div>
     </div>
