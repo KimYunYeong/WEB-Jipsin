@@ -11,7 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
     <script src="JavaScript/btn.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><!--jquery-->
     <link rel="stylesheet" href="CSS/style.css"><!--css-->
+
+    <script>
+      $(document).ready(function(){
+        $("#footers").load("footer/footer.html");
+      });
+    </script>
+    <script>
+      $(document).ready( function() {
+        $("#headers").load("common/header.html");
+        $("#footers").load("footer/footer.html");
+      });
+    </script>
     <style>
     /*---------------------------메인 1. about us-----------------------------*/
     #main_aboutus{
@@ -233,27 +246,6 @@
     <div style="height:540px;">
     </div>
     <!--                              footer                                 -->
-    <div id="footer">
-      <div id="footer_content">
-        <img src="header/logo.png" width="200px" height="100px">
-        <ul>
-          <li>부산광역시 남구 용소로 45</li>
-          <li>부경대학교 중앙동아리 짚신</li>
-          <li>문의: 010-8406-8626</li>
-        </ul>
-        <hr>
-        <p>Copyright
-        <script>
-          var now = new Date();
-          var year = now.getFullYear();
-          if (year == 2022) {
-            document.write(year);
-          }
-          else {
-            document.write("2022 - " + year);
-          }
-        </script> 짚신</p>
-      </div>
-    </div>
+    <div id="footers"></div>
   </body>
 </html>
