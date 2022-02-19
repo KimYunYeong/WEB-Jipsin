@@ -1,0 +1,19 @@
+div{
+  color: white;
+}
+p{
+  text-align: left;
+  font-size: 18px;
+  margin: auto;
+  margin-left: 0;
+}
+h3{
+  font-size: 35px;
+  font-weight: 300;
+  text-align: center;
+}
+
+#title hr{
+  border-color: white;
+  background-color: white;
+}
