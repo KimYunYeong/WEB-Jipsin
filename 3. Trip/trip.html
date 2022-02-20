@@ -6,10 +6,43 @@
     <link rel="stylesheet" href="../CSS/style.css"><!--CSS-->
     <script src="../JavaScript/btn.js"></script><!--JavaScript-->
     <style>
-      .header_img{
+      article{
+        background-color: #cfd6dc;
         width: 100%;
-        height: 300px;
-        background-color: gray;
+      }
+      h3{
+        margin:0;
+        font-size: 24px;
+      }
+      h4{
+        margin-top: 5px;
+        margin-bottom: 18px;
+        font-size: 11px;
+        color: #60656e;
+      }
+      p{
+        margin: 0;
+        height: 100%;
+        line-height: 30px;
+      }
+      .paragraph{
+        grid-row-gap: 30px;
+      }
+      .article_array{
+        width:auto;
+        height: auto;
+        margin: 20px;
+      }
+      .read_more{
+        width: 130px;
+        height: 30px;
+        color: #ddf3f1;
+        background-color: #1a6c7a;
+        border-style: solid !important;
+        border-color: transparent; /*딜레이땜에 테두리 있으면 안 예뻐서 투명*/
+        margin: 0;
+        text-align: center;
+        transition-duration: 0.5s;
       }
     </style>
   </head>
@@ -31,9 +64,45 @@
       </div>
       <h1 id="header_title">Trip</h1>
     </div>
+    <!--  -->
+    <div class="content">
+      <div class="array">
+        <div class="paragraph">
+          <article>
+            <div class="article_array">
+              <h3>2022년 1학기 2차 정기여행</h3>
+              <h4>xx월 xx, 2022</h4>
+              <div class="read_more"onmouseover="mOver(this, 'white', '#59949e')" onmouseout="mOut(this, 'white', '#1a6c7a')">
+                <p>READ MORE</p>
+              </div>
+            </div>
+          </article>
+
+          <article>
+            <div class="article_array">
+              <h3>2022년 1학기 1차 정기여행</h3>
+              <h4>xx월 xx, 2022</h4>
+              <div class="read_more"onmouseover="mOver(this, 'white', '#59949e')" onmouseout="mOut(this, 'white', '#1a6c7a')">
+                <p>READ MORE</p>
+              </div>
+            </div>
+          </article>
+
+          <article>
+            <div class="article_array">
+              <h3>2021년 2학기 2차 정기여행</h3>
+              <h4>xx월 xx, 2022</h4>
+              <div class="read_more"onmouseover="mOver(this, 'white', '#59949e')" onmouseout="mOut(this, 'white', '#1a6c7a')">
+                <p>READ MORE</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
     <!--                                footer                               -->
     <div id="footer">
-      <div id="footer_content">
+      <div id="footer_array">
         <img src="../header/logo.png" width="200px" height="100px">
         <ul>
           <li>부산광역시 남구 용소로 45</li>

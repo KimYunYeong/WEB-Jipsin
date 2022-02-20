@@ -6,10 +6,53 @@
     <link rel="stylesheet" href="../CSS/style.css"><!--CSS-->
     <script src="../JavaScript/btn.js"></script><!--JavaScript-->
     <style>
-      .header_img{
+      p{
+        text-align: left;
+        font-size: 18px;
+        margin: auto;
+        margin-left: 0;
+      }
+      h3{/*본문 이미지 안 글자*/
+        text-align: center;
+        margin: 0;
+        line-height: 300px;/*가운데 정렬 paragraph_grid 높이 같게*/
+        font-size: 40px;
+        color: white;
+      }
+      .bg_img{
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-color: rgba(0, 0, 0, 0.3);/*배경 이미지 밝기*/
+        background-blend-mode: multiply;/*이하동문*/
+      }
+      .img{
+        height: 350px;
         width: 100%;
+      }
+      .paragraph_grid{
+        grid-template-columns: 40% 54%;
+        grid-column-gap: 6%;
         height: 300px;
-        background-color: gray;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      .paragraph p{
+        margin-top: 130px;/*본문 높이 조절*/
+      }
+      .array hr{
+        height: 0;
+        width: 100%;
+        border-style: solid;
+        border-width: 0.1px;
+        border-color: lightgray;
+      }
+      #title hr{
+        border-color: black;
+      }
+      #caution{
+      margin-top: 50px;
+      margin-bottom: 50px;
+      color: red;
       }
     </style>
   </head>
@@ -31,9 +74,50 @@
       </div>
       <h1 id="header_title">Activity</h1>
     </div>
+    <!--                               Activity                              -->
+    <div class="content">
+      <div class="array">
+        <div id="title">
+          <h2>Action plan</h2>
+          <hr>
+        </div>
+        <!--  -->
+        <div class="paragraph">
+          <div class="img" style="background-image: url(process.jpg);"></div>
+        </div>
+        <!--  -->
+        <hr>
+        <div class="paragraph paragraph_grid">
+          <div class="bg_img" style="background-image: url(trip.jpg);">
+            <h3>정기여행</h3>
+          </div>
+          <div>
+            <p>
+              학기 내 중간 전, 기말 전 총 2번 여행을 계획하고 있습니다.<br>
+            </p>
+          </div>
+        </div>
+        <!--  -->
+        <hr>
+        <div class="paragraph paragraph_grid">
+          <div class="bg_img" style="background-image: url(conference.jpg);">
+            <h3>정기총회</h3>
+          </div>
+          <div>
+            <p>
+              매달 말에 실시하며, 짚신 동아리 운영에 대한 회의를 진행합니다.
+            </p>
+          </div>
+        </div>
+        <hr>
+        <div id="caution">
+          <p>※일부 활동은 코로나19 방역지침에 따라 제한되거나 변경될 수 있습니다.※</p>
+        </div>
+      </div>
+    </div>
     <!--                                footer                               -->
     <div id="footer">
-      <div id="footer_content">
+      <div id="footer_array">
         <img src="../header/logo.png" width="200px" height="100px">
         <ul>
           <li>부산광역시 남구 용소로 45</li>

@@ -63,32 +63,32 @@ color: white;
   text-align: left;
   height: 410px;
 }
-#footer_content{
+#footer_array{
   margin-left: 20px;
   width: auto;
   height: 100%
 }
-#footer_content img{
+#footer_array img{
   margin-top: 60px;
   margin-left: 20px;
 }
-#footer_content ul{
+#footer_array ul{
   margin-bottom: 40px;
 }
-#footer_content li{
+#footer_array li{
   list-style: none;
   margin-bottom: 20px;
   font-weight: 600;
   color: #26667a;
 }
-#footer_content hr{
+#footer_array hr{
   width: 99%;
   height: 0;
   border: 0.8px;
   border-style: solid;
   border-color: lightgray;
 }
-#footer_content p{
+#footer_array p{
   margin: 25px;
   text-align: center;
   color: gray;
@@ -138,7 +138,7 @@ color: white;
 }
 #title hr{
   height: 0;
-  width: 80%;
+  width: 100%;
   border-style: solid;
   border-width: 0.1px;
 }
