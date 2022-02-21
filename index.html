@@ -11,19 +11,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
     <script src="JavaScript/btn.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script--><!--jquery-->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <!--jquery-->
     <link rel="stylesheet" href="CSS/style.css"><!--css-->
-    <!-- <script>
-      $(document).ready( function() {
-        $("#headers").load("common/header.html");
-        $("#footers").load("footer/footer.html");
-      });
-    </script> -->
     <script>
       document.addEventListener("DOMContentLoaded", function(event){
         alert("본 웹사이트는 현재 미완성으로 Chrome PC 환경에 최적화 돼 있으며, 모든 텍스트와 이미지는 제작자 임의로 작성하였습니다.")
       })
     </script>
+    <script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
     <style>
     /*---------------------------메인 1. about us-----------------------------*/
     #main_aboutus{
@@ -244,7 +268,7 @@
     <div style="height:540px;">
     </div>
     <!--                              footer                                 -->
-    <div id="footer">
+    <!-- <div id="footer">
       <div id="footer_array">
         <img src="header/logo.png" width="200px" height="100px">
         <ul>
@@ -265,25 +289,10 @@
           }
         </script> 짚신</p>
       </div>
-    </div>
-    <!-- <div data-include-path="footer/footer.html"></div>
+    </div> -->
+    <div include-html="footer/footer.html"></div>
     <script>
-      window.addEventListener('load', function() {
-        var allElements = document.getElementsByTagName('*');
-        Array.prototype.forEach.call(allElements, function(el) {
-          var includePath = el.dataset.includePath;
-          if (includePath) {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-              if (this.readyState == 4 && this.status == 200) {
-                el.outerHTML = this.responseText;
-              }
-            };
-            xhttp.open('GET', includePath, true);
-            xhttp.send();
-          }
-        });
-      });
-    </script> -->
+      inlcudeHTML();
+    </script>
   </body>
 </html>
